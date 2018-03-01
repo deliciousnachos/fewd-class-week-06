@@ -1,0 +1,103 @@
+.container {
+	padding: 0 30px;
+}
+
+h1, h2, p {
+	font-family: Helvetica, sans-serif;
+}
+
+h1, h2 {
+	font-size: 30px
+}
+
+h1 {
+	text-align: center;
+	margin: 25px 0;
+}
+
+h2 {
+	margin-bottom: 15px;
+}
+
+p {
+	line-height: 1.8em;
+	margin: 10px 0;
+	font-size: 16px;
+}
+
+section.tablet-view, section.mobile-view {
+	display: none;
+}
+
+section {
+	background: aqua;
+	padding: 15px;
+}
+
+/*FOR SCREEN WIDTHS UNDER 768 PX
+
+Change the font to Georgia
+Change the font size of the h1 and h2 to 25px
+Change the font size of the paragraph to 15px
+Remove the section with the class 'desktop-view'
+Make the section with the class 'tablet-view' appear
+Give the section with the class 'tablet-view' a background color of 'lightgreen'
+*/
+
+/*FOR SCREEN WIDTHS UNDER 425 PX
+
+Remove the padding on the container class
+Change the font to Courier New
+Change the font size of the h1 and h2 to 22px
+Change the font size of the paragraph to 14px
+Center the h2
+Remove the section with the class 'tablet-view'
+Make the section with the class 'mobile-view' appear
+Give the section with the class 'mobile-view' a background color of 'lightgrey'
+*/
+
+/*CHANGE STYLES BELOW*/
+
+@media screen and (max-width: 768px) {
+  h1, h2, p {
+    font-family: 'Georgia', sans-serif;
+  }
+  h1, h2 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 15px;
+  }
+  section.desktop-view {
+    display: none;
+  }
+  section.tablet-view {
+    display: block;
+    background-color: lightgreen;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1, h2, p {
+    font-family: 'Courier-New', monospace;
+  }
+  h1, h2 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 14px;
+  }
+  h2 {
+    text-align: center;
+  }
+  .container {
+    padding: 0;
+  }
+  section.tablet-view, section.desktop-view {
+    display: none;
+  }
+  section.mobile-view {
+    display: block;
+    background-color: lightgray;
+  }
+}
